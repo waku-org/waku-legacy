@@ -45,7 +45,7 @@ else:
 import
   options, tables, times, chronos, chronicles, metrics,
   eth/[keys, async_utils, p2p],
-  ../../whisper/whisper_types,
+  ../whisper/whisper_types,
   eth/trie/trie_defs
 
 export

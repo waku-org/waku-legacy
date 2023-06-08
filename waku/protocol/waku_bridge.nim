@@ -15,7 +15,7 @@ else:
 
 import
   eth/p2p,
-  ../../whisper/whisper_protocol,
+  ../whisper/whisper_protocol,
   ./waku_protocol
 
 proc shareMessageQueue*(node: EthereumNode) =

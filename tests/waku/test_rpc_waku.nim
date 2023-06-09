@@ -10,7 +10,7 @@ import
 template sourceDir*: string = currentSourcePath.rsplit(DirSep, 1)[0]
 ## Generate client convenience marshalling wrappers from forward declarations
 ## For testing, ethcallsigs needs to be kept in sync with ../waku/node/v1/rpc/waku
-const sigPath = sourceDir / ParDir / ParDir / "waku" / "v1" / "node" / "rpc" / "wakucallsigs.nim"
+const sigPath = sourceDir / ParDir / ParDir / "waku" / "node" / "rpc" / "wakucallsigs.nim"
 createRpcSigs(RpcSocketClient, sigPath)
 
 proc setupNode(capabilities: varargs[ProtocolInfo, `protocolInfo`],

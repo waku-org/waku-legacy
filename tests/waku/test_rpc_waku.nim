@@ -4,8 +4,8 @@ import
   std/[options, os, strutils],
   testutils/unittests, stew/byteutils, json_rpc/[rpcserver, rpcclient],
   eth/common as eth_common, eth/[keys, p2p],
-  ../../waku/v1/protocol/waku_protocol,
-  ../../waku/v1/node/rpc/[hexstrings, rpc_types, waku, key_storage]
+  ../../waku/protocol/waku_protocol,
+  ../../waku/node/rpc/[hexstrings, rpc_types, waku, key_storage]
 
 template sourceDir*: string = currentSourcePath.rsplit(DirSep, 1)[0]
 ## Generate client convenience marshalling wrappers from forward declarations

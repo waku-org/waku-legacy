@@ -2,8 +2,6 @@ import
   chronos, bearssl/rand,
   eth/[keys, p2p]
 
-import libp2p/crypto/crypto
-
 var nextPort = 30303
 
 proc localAddress*(port: int): Address =
@@ -38,7 +36,7 @@ proc getRng(): ref rand.HmacDrbgContext =
   #      purpose of the tests, it's ok as long as we only use a single thread
   {.gcsafe.}:
     if rngVar.rng.isNil:
-      rngVar.rng = crypto.newRng()
+      rngVar.rng = newRng()
     rngVar.rng
 
 template rng*(): ref rand.HmacDrbgContext =

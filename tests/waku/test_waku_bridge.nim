@@ -12,8 +12,8 @@ import
   std/[sequtils, tables],
   chronos, testutils/unittests, eth/p2p, eth/p2p/peer_pool,
   ../../waku/whisper/whisper_protocol as whisper,
-  ../../waku/v1/protocol/waku_protocol as waku,
-  ../../waku/v1/protocol/waku_bridge,
+  ../../waku/protocol/waku_protocol as waku,
+  ../../waku/protocol/waku_bridge,
   ../test_helpers
 
 let safeTTL = 5'u32
